@@ -3,12 +3,15 @@ services:
     image: guiparaiso/fastapi-app:latest
     ports:
       - "8080:8080"
+    env_file:
+      - .env
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@database:5432/${POSTGRES_DB}
     depends_on:
       - database
     networks:
       - app-network
+
 
   database:
     image: postgres:15

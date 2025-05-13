@@ -22,6 +22,12 @@ load_dotenv()
 SECRET_KEY = os.environ.get("SECRET_KEY")
 ALGORITHM = os.environ.get("ALGORITHM")
 
+# Verificar se as variáveis foram carregadas corretamente
+if SECRET_KEY is None:
+    raise ValueError("A variável de ambiente SECRET_KEY não está definida no .env")
+if ALGORITHM is None:
+    raise ValueError("A variável de ambiente ALGORITHM não está definida no .env")
+
 
 Base.metadata.create_all(bind=engine)
 
