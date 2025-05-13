@@ -1,8 +1,6 @@
 services:
   app:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    image: guiparaiso/fastapi-app:latest
     ports:
       - "8080:8080"
     environment:
