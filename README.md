@@ -79,7 +79,7 @@ ALGORITHM= HS256
 ALPHA_VANTAGE_API_KEY= sua key Alpha Vantage para a consulta Euro / Dolar funcionar!
 ```
 
-### 5. Agora sim! Execute com Docker Compose
+### 5. Agora sim! Execute com Docker Compose, mas antes ***inicie o Docker no seu computador!!***
 
 ```bash
 # Entre na pasta do compose.yaml
@@ -98,4 +98,9 @@ Acesse a documentação interativa em:
 
 
 Link do Docker Hub:  https://hub.docker.com/repository/docker/guiparaiso/fastapi-app/general
+
+Link da API funcionando localmente: https://youtu.be/SqUgc80EK4w
+
+Link Da API funcionando na AWS: https://youtu.be/cRZtIGAxQXA
+
 

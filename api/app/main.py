@@ -16,6 +16,8 @@ from models import Base
 from database import engine  # seu engine SQLAlchemy
 import pandas as pd
 import requests
+import socket
+from datetime import datetime
 
 load_dotenv()
 
@@ -74,6 +76,14 @@ def verify_token(token: str = Depends(oauth2_scheme)):
 
 
 # Endpoints
+@app.get("/health-check")
+def health_check():
+    return {
+        "statusCode": 200,
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "hostname": socket.gethostname()
+    }
+    
 @app.post("/registrar", response_model=Token)
 def registrar(user: UserCreate, db: Session = Depends(get_db)):
     db_user = db.query(models.User).filter(models.User.email == user.email).first()
