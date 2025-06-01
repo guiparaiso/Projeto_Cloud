@@ -91,6 +91,14 @@ docker-compose up
 Acesse a documentação interativa em:
  http://localhost:8080/docs
 
+
+## Facilitando sua vida!
+
+Se Deseja somente ver a API funcionando, sem problemas! Acesse o site abaixo, onde a API já etá rodando em nuvem pela AWS:
+
+👉 https://container-service-1.kyk51xpkrawsg.us-east-1.cs.amazonlightsail.com/docs
+
+
 ## Para a documentação completa do projeto, acesse:
 
 👉 Link do MKDocs: https://guiparaiso.github.io/Cloudb/
